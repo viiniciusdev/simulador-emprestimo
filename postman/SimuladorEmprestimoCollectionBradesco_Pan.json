@@ -1,0 +1,81 @@
+{
+  "info": {
+    "name": "Simulador Empréstimo API - Bradesco e Banco Pan (IDs reais)",
+    "_postman_id": "simulador-emprestimo-bradesco-pan",
+    "description": "Collection com exemplos reais de simulação de empréstimos com IDs personalizados para Bradesco (237) e Banco Pan (623).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+
+    {
+      "name": "Listar Instituições",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/instituicoes",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["api", "instituicoes"]
+        }
+      }
+    },
+
+    {
+      "name": "Listar Convênios",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/convenios",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["api", "convenios"]
+        }
+      }
+    },
+
+    {
+      "name": "Simular Empréstimo - Banco Pan (60 parcelas)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"valor_emprestimo\": 10000,\n  \"institucoes\": [623],\n  \"convenios\": [623],\n  \"parcela\": 60\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/simulacoes",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["api", "simulacoes"]
+        }
+      }
+    },
+
+    
+    {
+      "name": "Simular Empréstimo - Bradesco (24 parcelas)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"valor_emprestimo\": 10000,\n  \"institucoes\": [237],\n  \"convenios\": [237],\n  \"parcela\": 24\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/simulacoes",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["api", "simulacoes"]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+[
+    {
+      "instituicao_id": 623,
+      "convenio_id": 623,
+      "parcela": 60,
+      "taxa_juros": 1.50,
+      "coeficiente": 0.025393
+    },
+    {
+      "instituicao_id": 237,
+      "convenio_id": 237,
+      "parcela": 24,
+      "taxa_juros": 1.3,
+      "coeficiente": 0.048772
+    }
+  ]
+  
